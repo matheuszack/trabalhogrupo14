@@ -6,10 +6,9 @@
     <meta http-equiv="x-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <meta name="viewport" content="width-device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="css/contatos.css">
-    <link rel="stylesheet" href="contatos.html">
+    <link rel="stylesheet" href="css/cardapios.css">
+    <link rel="stylesheet" href="cardápio.html">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
-    <link rel="stylesheet" href="css/principal.css">
     <title>Pizza das Galaxyas - Cardápio Pizza das Galaxyas Rio de Janeiro</title>
     
 </head>
@@ -28,207 +27,136 @@
               <a href="contatos.html"><button>Contato</button></a>
               </div>
               <div class="icones">
-                <i class="fas fa-bars" id="menu-bars"></i>
                 <i class="fas fa-search" id="search-icon"></i>
                 <a href="https://ifoodbr.onelink.me/F4X4/ofornes" class="fas fa-pizza-slice">
-                <a href="#" class="fas fa-shooping-cart"></a>
+                <a href="#" class="fa-solid fa-shuttle-space"></a>
               </div>
-              
-              
         </header>
-        <section class="menu" id="menu">
 
-          <h3 class="subtitulo"> nosso menu </h3>
-          <h1 class="cabeçalho"> today's speciality </h1>
+              <nav>
+                <ul>      
+                    <li> Pedido minimo</li>
+                    <li> Tempo estimado </li>
+                    <li> Aberto </li>
+                </ul>
+              </nav>
+              
+              <section class="elementor">
+                <h1>Cardapio</h1>
+              </section>
+                   
+
+              <section id='cardapio' >
       
-          <div class="box-container">
-      
-              <div class="box">
-                  <div class="image">
-                      <img src="imagem/QUEIJO-BRIE-COM-GELEIA-DE-PIMENTA-7.jpg" alt="imagem">
-                      <a href="#" class="fas fa-heart"></a>
+                <article class="card">
+                  <img src='imagem/cardapios/BACON-COM-CATUPIRY-9.jpg' class='imagemCardapio'>
+                  <h3 class='nomeP'>bacon com catupiry</h3>
+                  <div class='botaoCardapio' onclick="pedido(1)">
+                    comprar agora
                   </div>
-                  <div class="content">
-                      <div class="stars">
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star-half-alt"></i>
-                      </div>
-                      <h3>pizza deliciosa queijo</h3>
-                      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
-                      <a href="#" class="btn">adicionar ao carrinho</a>
-                      <span class="price">25,00</span>
+                </article>
+                
+            
+               <article class="card">
+                  <img src='imagem/cardapios/banana-com-canela.jpg' class='imagemCardapio'>
+                  <h3 class='nomeP'>banana-com-canela</h3>
+                  <div class='botaoCardapio' onclick="pedido(2)">
+                    comprar agora
                   </div>
+                </article>
+    
+                <article class="card">
+                  <img src='imagem/cardapios/banana-nevada-3-1024x1024.jpg' class='imagemCardapio'>
+                  <h3 class='nomeP'>banana-nevada</h3>
+                  <div class='botaoCardapio' onclick="pedido(3)">
+                    comprar agora
+                  </div>
+                </article>
+                
+
+                
+              </section>
+              
+        
+              <div id='janela'>
+              <section id="popup">
+                <div class='popupImg'>
+                  <img id='popupImg' src='imagem/fundo-pizza5.png'>
+                </div>
+                <h2 id='popupNome'>&nbsp;</h2>
+                <h4 id='popupValor'>&nbsp;</h4>
+                <label for="quantidadeProduto">Quantidade</label>
+                <select id="quantidadeProduto">
+                  <option value="1">pequena</option>
+                  <option value="2">media</option>
+                  <option value="3">grande</option>
+                </select>
+                <p id='popupDesc'>&nbsp;</p>
+                <div class='botaoAdicionar' onclick="adicionarCarrinho()">adicionar ao carrinho</div>
+                <a class="fecharCarrinho" onclick="fecharPedido()">fechar</a>
+              </section>
               </div>
-      
-              <div class="box">
-                  <div class="image">
-                      <img src="imagem/BACON-COM-CATUPIRY-9.jpg" alt="pizza">
-                      <a href="#" class="fas fa-heart"></a>
-                  </div>
-                  <div class="content">
-                      <div class="stars">
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star-half-alt"></i>
-                      </div>
-                      <h3>pizza deliciosa de calabresa</h3>
-                      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
-                      <a href="#" class="btn">adicionar ao carrinho</a>
-                      <span class="price">25,00</span>
-                  </div>
-              </div>
-      
-              <div class="box">
-                  <div class="image">
-                      <img src="imagem/banana-nevada-3-1024x1024.jpg" alt="">
-                      <a href="#" class="fas fa-heart"></a>
-                  </div>
-                  <div class="content">
-                      <div class="stars">
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star-half-alt"></i>
-                      </div>
-                      <h3>pizza deliciosa de banana</h3>
-                      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
-                      <a href="#" class="btn">add to cart</a>
-                      <span class="price">25,00</span>
-                  </div>
-              </div>
-      
-              <div class="box">
-                  <div class="image">
-                      <img src="imagem/CAMARAO-COM-CATUPIRY-9.jpg" alt="">
-                      <a href="#" class="fas fa-heart"></a>
-                  </div>
-                  <div class="content">
-                      <div class="stars">
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star-half-alt"></i>
-                      </div>
-                      <h3>pizza deliciosa camarão</h3>
-                      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
-                      <a href="#" class="btn">add to cart</a>
-                      <span class="price">$25,00</span>
-                  </div>
-              </div>
-      
-              <div class="box">
-                  <div class="image">
-                      <img src="imagem/Carne-seca-com-catupiry-1.jpg" alt="">
-                      <a href="#" class="fas fa-heart"></a>
-                  </div>
-                  <div class="content">
-                      <div class="stars">
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star-half-alt"></i>
-                      </div>
-                      <h3>pizza deliciosa carne seca</h3>
-                      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
-                      <a href="#" class="btn">add to cart</a>
-                      <span class="price">25,00</span>
-                  </div>
-              </div>
-      
-              <div class="box">
-                  <div class="image">
-                      <img src="imagem/Catuperoni.jpg" alt="">
-                      <a href="#" class="fas fa-heart"></a>
-                  </div>
-                  <div class="content">
-                      <div class="stars">
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star-half-alt"></i>
-                      </div>
-                      <h3>deliciosa pizza de catupirone</h3>
-                      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
-                      <a href="#" class="btn">add to cart</a>
-                      <span class="price">25,00</span>
-                  </div>
-              </div>
-      
-              <div class="box">
-                  <div class="image">
-                      <img src="imagem/Champignon.jpg" alt="">
-                      <a href="#" class="fas fa-heart"></a>
-                  </div>
-                  <div class="content">
-                      <div class="stars">
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star-half-alt"></i>
-                      </div>
-                      <h3>pizza deliciosa Champignon</h3>
-                      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
-                      <a href="#" class="btn">add to cart</a>
-                      <span class="price">25,00</span>
-                  </div>
-              </div>
-      
-              <div class="box">
-                  <div class="image">
-                      <img src="imagem/Chocolate-ao-leite-com-banana-1024x1024.jpg" alt="">
-                      <a href="#" class="fas fa-heart"></a>
-                  </div>
-                  <div class="content">
-                      <div class="stars">
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star-half-alt"></i>
-                      </div>
-                      <h3>pizza deliciosa de chocolate</h3>
-                      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
-                      <a href="#" class="btn">add to cart</a>
-                      <span class="price">25,00</span>
-                  </div>
-              </div>
-      
-              <div class="box">
-                  <div class="image">
-                      <img src="imagem/chocolate-ao-leite-com-morango.jpg" alt="">
-                      <a href="#" class="fas fa-heart"></a>
-                  </div>
-                  <div class="content">
-                      <div class="stars">
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star-half-alt"></i>
-                      </div>
-                      <h3>pizza deliciosa de chocolate e morango</h3>
-                      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
-                      <a href="#" class="btn">add to cart</a>
-                      <span class="price">$25,00</span>
-                  </div>
-              </div>
-      
-          </div>
-      
-      </section>
+              
+            
+              
+              <script>
+                  var sacola = window.document.getElementById('carrinho')
+                  var chave = window.document.getElementById('janela')
+                  var nome = ['Bacon Com Catupiry', 'Banana-Com-Canela' ,'banana-Nevada']
+                  var valor = [39.90,49.90,59.90]
+                  var desc = ['pizza com bacon recheada com presunto, champignon e catupiry salpicado com bacon crocante.',
+                  'pizza de banana com canela',
+                  'Com uma massa leve e um recheio feito com bananas em rodela, chocolate branco, açúcar e canela, essa pizza serve a família toda, aproveite nossa promoção, apenas nessa Galaxya.']
+                  var foto = ['imagem/cardapios/BACON-COM-CATUPIRY-9.jpg','imagem/cardapios/banana-com-canela.jpg','imagem/cardapios/banana-nevada-3-1024x1024.jpg']
+                  function pedido (item){
+                    chave.style.display = 'block'
+                
+                    if (item==1){
+                      item = 0
+                    } else if (item==2){
+                      item = 1
+                    }  else if (item==3){
+                      item = 2
+                    } 
+                  
+                  let popupNome = document.getElementById('popupNome')
+                  let popupValor = document.getElementById('popupValor')   
+                  let popupDesc = document.getElementById('popupDesc')
+                  window.document.querySelector('#popupImg').src = foto[item]
+                  
+                  popupNome.innerText = nome[item]
+                  popupValor.innerText = 'R$'+valor[item]
+             
+                  n=item
+                  }
+                  function adicionarCarrinho() {
+                  sacola.style.display = 'block'
+                  let nomeC = document.getElementById('itemNome')
+                  let valorC = document.getElementById('itemValor')
+                  document.querySelector('#carrImg').src = foto[n]
+                  
+                  let quantProduto = document.querySelector('#quantProduto').value 
+                  let subTotal = document.querySelector('#subTotal')
+                  subTotal.innerText = 'subtotal: '+(valor[n]*quantProduto)
+                  
+                  nomeC.innerText = nome[n]
+                  valorC.innerText = 'R$'+valor[n]+' x'+quantProduto
+                  
+                  }
+                function fecharPedido(){
+                  chave.style.display = 'none'
+          
+                }
+                function fecharCarrinho() {
+                  sacola.style.display = 'none'
+          
+                }
+                </script>
+              
       
         
 </body>
 </html>
+
 
               
